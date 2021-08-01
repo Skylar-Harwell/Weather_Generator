@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+    margin: 50px;
+    padding: 15px;
+}
+
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.25fr 0.5fr 0.5fr;
+    grid-template-areas: "header header header header"
+    "past search search search"
+    "past results results results"
+    "past future future future";
+}
+
+.input {
+    text-align: center;
+    margin: 50px 0 15px 0;
+    padding: 10px;
+}    
+
+input[type="text"] {
+    height: 50px;
+    width: 400px;
+    background: #e7e7e7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 10px;
+}
+
+input[type="submit"] {
+    height: 50px;
+    width: 100px;
+    background: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    
+}
+
+.display {
+    text-align: center;
+    border: solid black;
+}
+
+.hide {
+    display: none;
+}
+
+#search {
+    grid-area: search;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+#results {
+    grid-area: results;
+    text-align: center;
+    border: solid black;
+    font-weight: 800;
+    font-size: larger;
+    margin: 5px;
+    padding: 5px;
+}
+
+#future {
+    grid-area: future;
+    text-align: center;
+    border: solid black;
+    margin: 5px;
+    padding: 5px;
+}
+
+#past {
+    grid-area: past;
+    text-align: center;
+    border: solid black;
+    margin: 5px;
+    padding: 5px;
+}
