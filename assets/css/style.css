@@ -96,3 +96,16 @@ input[type="submit"] {
     margin: 5px;
     padding: 5px;
 }
+
+.btn {
+    display: block;
+    
+    height: 50px;
+    width: 100px;
+    background: #777777;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+}
