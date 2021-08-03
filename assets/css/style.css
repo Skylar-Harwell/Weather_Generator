@@ -8,6 +8,10 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+h2 {
+    font-weight: 800;
+}
+
 header {
     grid-area: header;
     text-align: center;
@@ -74,9 +78,9 @@ input[type="submit"] {
 #results {
     grid-area: results;
     text-align: center;
-    border: solid black;
-    font-weight: 800;
     font-size: larger;
+    font-weight: 800;
+    border: solid black;
     margin: 5px;
     padding: 5px;
 }
@@ -89,23 +93,55 @@ input[type="submit"] {
     padding: 5px;
 }
 
+.futureForecast {
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+    background: #575757;
+    color: #ffffff;
+    border-radius: 5px;
+}
+
 #past {
+    display: flex;
+    flex-direction: column;
     grid-area: past;
     text-align: center;
+    align-items: center;
     border: solid black;
     margin: 5px;
     padding: 5px;
 }
 
-.btn {
-    display: block;
-    
+.btn { 
     height: 50px;
-    width: 100px;
+    width: 200px;
     background: #777777;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     color: #ffffff;
     border: none;
     border-radius: 3px;
+}
+
+.btn-layout {
+    
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+@media only screen and (max-width:600px) {
+    .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.3fr 0.3fr 1.5fr 1.5fr 1.5fr;
+    grid-template-areas:
+    "header"
+    "search"
+    "results"
+    "future"
+    "past";
+    }
 }
