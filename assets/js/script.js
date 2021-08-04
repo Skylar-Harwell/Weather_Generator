@@ -16,6 +16,7 @@ var currIconEl = document.querySelector('#currIcon');
 
 button.addEventListener('click',function() {
     getCurrentWeather(inputValue.value);
+    $('#future').empty();
     getFutureWeather(inputValue.value);
     saveSearch();
 }); 
@@ -159,6 +160,7 @@ var getUV = function (lat, lon) {
                 var uvValue = data.current.uvi;
 
                 uvEl.innerHTML = 'UV INDEX: ' + uvValue;
+                // setUvColor(uvValue);
             });
         } else {
             alert('Error: ' + response.statusText);
@@ -168,6 +170,25 @@ var getUV = function (lat, lon) {
         alert('Unable to Connect to UV');
     });
 };
+
+// var setUvColor = function (uvValue) {
+//     var currUv = uvValue;
+//     if (currUv > 3) {
+//         uvEl.classList = 'low';
+//     } 
+//     if (currUv === 3 || >6) {
+//         uvValue.classList = 'moderate';
+//     }
+//     if (currUv === 6 || >8) {
+//         uvEl.classList = 'high';
+//     }
+//     if (currUv === 8 || > 11) {
+//         uvEl.classList = 'veryHigh';
+//     }
+//     if (currUv <= 11) {
+//         uvEl.classList = 'extreme';
+//     }
+// }
 
 var saveSearch = function () {
     var button = document.createElement('button');

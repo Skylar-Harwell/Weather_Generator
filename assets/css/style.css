@@ -102,6 +102,26 @@ input[type="submit"] {
     border-radius: 5px;
 }
 
+.low {
+    background: #19f105;
+}
+
+.moderate {
+    background: #d9f105;
+}
+
+.high {
+    background: #f19305;
+}
+
+.veryHigh {
+    background: #f10505;
+}
+
+.extreme {
+    background: #f10573;
+}
+
 #past {
     display: flex;
     flex-direction: column;
